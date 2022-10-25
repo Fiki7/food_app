@@ -5,6 +5,8 @@ import 'package:flutter/material.dart';
 import '../screens/filters.dart';
 
 class CustomDrawer extends StatefulWidget {
+  const CustomDrawer({super.key});
+
   @override
   State<CustomDrawer> createState() => _CustomDrawerState();
 }

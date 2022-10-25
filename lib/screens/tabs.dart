@@ -8,9 +8,7 @@ import '../widget/drawer.dart';
 class TabsScreen extends StatefulWidget {
   final List<Meal> favoriteMeals;
 
-  TabsScreen(
-    this.favoriteMeals,
-  );
+  const TabsScreen(this.favoriteMeals, {super.key});
   @override
   State<TabsScreen> createState() => _TabsScreenState();
 }
@@ -35,7 +33,7 @@ class _TabsScreenState extends State<TabsScreen>
       child: DefaultTabController(
         length: 2,
         child: Scaffold(
-          drawer: CustomDrawer(),
+          drawer: const CustomDrawer(),
           appBar: AppBar(
             title: Text(
               "Foody",

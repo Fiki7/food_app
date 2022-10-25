@@ -12,15 +12,14 @@ class MealItem extends StatelessWidget {
   final int duration;
   final Complexity complexity;
   final Affordability affordability;
-  
-  MealItem({
+
+  const MealItem({
     required this.id,
     required this.title,
     required this.imgurl,
     required this.duration,
     required this.complexity,
     required this.affordability,
-    
   });
 
   void selectMeal(BuildContext context) {
@@ -82,15 +81,15 @@ class MealItem extends StatelessWidget {
                 Hero(
                   tag: id,
                   child: ClipRRect(
+                    borderRadius: BorderRadius.only(
+                      topRight: Radius.circular(15),
+                      topLeft: Radius.circular(15),
+                    ),
                     child: Image.asset(
                       imgurl,
                       height: 250,
                       width: double.infinity,
                       fit: BoxFit.cover,
-                    ),
-                    borderRadius: BorderRadius.only(
-                      topRight: Radius.circular(15),
-                      topLeft: Radius.circular(15),
                     ),
                   ),
                 ),

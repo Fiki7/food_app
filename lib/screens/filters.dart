@@ -77,7 +77,7 @@ class _FiltersScreenState extends State<FiltersScreen> {
                 icon: const Icon(Icons.save))
           ],
         ),
-        drawer: CustomDrawer(),
+        drawer: const CustomDrawer(),
         body: Column(
           children: [
             Container(

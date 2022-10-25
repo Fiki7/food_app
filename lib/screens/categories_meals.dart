@@ -8,7 +8,7 @@ class CategoryMealsScreen extends StatefulWidget {
   static const routeName = '/category-meals';
 
   final List<Meal> availableMeals;
-  CategoryMealsScreen(this.availableMeals);
+  const CategoryMealsScreen(this.availableMeals, {super.key});
 
   @override
   State<CategoryMealsScreen> createState() => _CategoryMealsScreenState();
@@ -34,6 +34,7 @@ class _CategoryMealsScreenState extends State<CategoryMealsScreen> {
     super.didChangeDependencies();
   }
 
+  // ignore: unused_element
   void _removeMeal(String mealId) {
     setState(() {
       displayMeals.removeWhere((meal) => meal.id == mealId);
@@ -67,7 +68,6 @@ class _CategoryMealsScreenState extends State<CategoryMealsScreen> {
                   duration: displayMeals[index].duration,
                   complexity: displayMeals[index].complexity,
                   affordability: displayMeals[index].affordability,
-                  
                 ),
               );
             }),
