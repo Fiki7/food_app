@@ -8,9 +8,9 @@ on:
     - main
     - master
     - develop
-  name: "Build & Release"
+name: "Build & Release"
 jobs:
-build:
+  build:
     name: Build & Release
     runs-on: ubuntu-latest
     steps:
@@ -25,7 +25,7 @@ build:
       - run: flutter analyze .
       - run: flutter build apk --debug --split-per-abi
       - run: Push to Release
-      - uses: actions/upload-artifact@v1
+        uses: ncipollo/release-artifact@v1
         with:
           artifacts: "build/app/outputs/apk/debug/*"
           tag: v1.0.${{ github.run_number}}
