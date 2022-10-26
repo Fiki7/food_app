@@ -1,13 +1,10 @@
+name: Dart
+
 on:
-  pull_request:
-  branches:
-    - main
-    - master
   push:
-    branches:
-    - main
-    - master
-    - develop
+    branches: ["main", "development"]
+  pull_request:
+    branches: ["main", "development"]
 
 jobs:
   flutter_test:
